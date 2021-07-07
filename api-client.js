@@ -15,6 +15,7 @@ const API_KEY = '?api_key=90fe6213ca00e7c19b576b393e7a44c1';
 async function getMovieGenres(){
     try{
         const apiUrl = `https://api.themoviedb.org/3/genre/movie/list${API_KEY}`;
+<<<<<<< HEAD
         const data = await fetch (apiUrl);
         const genres = await data.json()
      movieGenres(genres.genres);
@@ -96,3 +97,13 @@ async function getTop1975() {
            
            
  document.addEventListener("DOMContentLoaded", getMovieGenres(), getFavorite(), getTop10(), getTop1975());
+=======
+        const res =  await fetch(apiUrl );
+        const processRes = await response.json();
+        console.log(getData);
+        return processRes;
+    } catch (error){
+        console.log('error');
+      } }
+
+>>>>>>> 94aa4b53dd9c5127d852c70a09c18d6cd86ab3e0
